@@ -1,0 +1,48 @@
+# ~/.config/starship.toml
+
+add_newline = false
+
+[line_break]
+disabled = true
+
+[character]
+error_symbol = "[✖](bold red) "
+
+[cmd_duration]
+format = " took [$duration]($style) "
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[package]
+disabled = true
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[rust]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false

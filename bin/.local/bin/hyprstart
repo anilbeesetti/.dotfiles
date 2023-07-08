@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cd ~
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export MOZ_ENABLE_WAYLAND=1
+
+# Log WLR Errors & Logs To The Hyprland Log (recommended)
+export HYPRLAND_LOG_WLR=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORM="wayland;xcb"
+
+# Tell XWayland To Use Cursor Theme & Size
+export XCURSOR_THEME=Bibata-Modern-Ice
+export XCURSOR_SIZE=24
+export GTK_THEME=Catppuccin-Mocha-Standard-Mauve-Dark
+
+
+exec Hyprland
