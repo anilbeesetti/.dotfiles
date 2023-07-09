@@ -1,0 +1,194 @@
+@import "mocha.css";
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: CaskaydiaCove Nerd Font, FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: alpha(@base, 0.8);
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.termite {
+  background-color: #3f3f3f;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: @text;
+  border-radius: 2px;
+  padding: 0px 3px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: @blue;
+  border: @blue;
+  color: @crust;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: @green;
+  color: @crust;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @crust;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  padding: 0 10px;
+  border-radius: 3px;
+  margin: 3px 0px;
+}
+
+#window,
+#workspaces {
+  margin-right: 5px;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#pulseaudio {
+  background-color: @mauve;
+  color: @crust;
+}
+
+#pulseaudio:hover {
+  background-color: @pink;
+}
+
+#pulseaudio.bluetooth {
+  background-color: @blue;
+  color: @crust;
+}
+
+#pulseaudio.bluetooth:hover {
+  background-color: @sky;
+}
+
+#pulseaudio.muted {
+  background-color: @red;
+  color: @crust;
+}
+
+#pulseaudio.muted:hover {
+  background-color: @maroon;
+}
+
+#pulseaudio.microphone {
+  background-color: @mauve;
+  color: @crust;
+}
+
+#pulseaudio.microphone:hover {
+  background-color: @pink;
+}
+
+#pulseaudio.microphone.source-muted {
+  background-color: @red;
+  color: @crust;
+}
+
+#pulseaudio.microphone.source-muted:hover {
+  background-color: @maroon;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#network,
+#network.ethernet,
+#network.wifi {
+  background-color: @teal;
+  color: @crust;
+}
+
+#network:hover,
+#network.ethernet:hover,
+#network.wifi:hover {
+  background-color: @teal;
+}
+
+#network.disabled,
+#network.disconnected {
+  background-color: @red;
+  color: @crust;
+}
+
+#network.disabled:hover,
+#network.disconnected:hover {
+  background-color: @maroon;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#cpu {
+  background-color: @sapphire;
+  color: @crust;
+}
+
+#cpu:hover {
+  background-color: @teal;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#memory {
+  background-color: @rosewater;
+  color: @crust;
+}
+
+#memory:hover {
+  background-color: @teal;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#clock {
+  background-color: @lavender;
+  color: @crust;
+}
+
+#clock:hover {
+  background-color: @text;
+}
