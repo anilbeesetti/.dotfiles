@@ -3,7 +3,7 @@
 # History in cache directory
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.cache/zsh_history
 
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
