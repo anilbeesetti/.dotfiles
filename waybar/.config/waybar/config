@@ -2,7 +2,7 @@
   "height": 24,
   "spacing": 4,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-right": ["battery", "pulseaudio", "network", "cpu", "memory", "clock"],
+  "modules-right": ["battery", "backlight", "pulseaudio", "network", "cpu", "memory", "clock"],
   "hyprland/workspaces": {
     "on-click": "activate",
     "activate-only": false,
@@ -23,24 +23,24 @@
     "tooltip": false
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "C {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": "{used:0.1f}GB ({percentage}%) / {total:0.1f}GB",
+    "format": "M {}%",
     "tooltip": false
   },
   "network": {
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "⚠ Disconnected",
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": "  {ipaddr}/{cidr}",
+    "format-linked": "  {ifname} (No IP)",
+    "format-disconnected": " Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
     "tooltip": false
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth": " {icon} {volume}%",
     "format-bluetooth-muted": "󰖁 {volume}%",
     "format-muted": "󰖁 {volume}%",
     "format-icons": {
@@ -52,7 +52,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "pamixer -t",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "tooltip": false
   },
 
@@ -62,10 +62,19 @@
         "warning": 30,
         "critical": 15
     },
+    "interval": 10,
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": "  {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{icon}  {time}",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip": false
+  },
+
+  "backlight": { 
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""],
+    "tooltip": false
   }
 }

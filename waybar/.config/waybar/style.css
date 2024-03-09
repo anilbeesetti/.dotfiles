@@ -1,9 +1,7 @@
 @import "mocha.css";
 
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: CaskaydiaCove Nerd Font, FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: CaskaydiaCove Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -191,4 +189,34 @@ window#waybar.chromium {
 
 #clock:hover {
   background-color: @text;
+}
+
+#backlight {
+  background-color: @peach;
+  color: @crust;
+}
+
+#battery {
+  background-color: @sapphire;
+  color: @crust;
+}
+
+#battery.charging, #battery.plugged {
+  background-color: #31C48D;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @red;
+  opacity: 1;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
