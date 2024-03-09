@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # History in cache directory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.cache/zsh_history
 
 setopt autocd extendedglob nomatch menucomplete
@@ -20,6 +20,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files.
+
+bindkey -e
 
 [ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 [ -f "$HOME/.config/shell/exports" ] && source "$HOME/.config/shell/exports"

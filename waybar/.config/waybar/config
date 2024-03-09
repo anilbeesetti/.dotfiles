@@ -1,10 +1,11 @@
 {
   "height": 24,
   "spacing": 4,
-  "modules-left": ["wlr/workspaces", "hyprland/window"],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
-  "wlr/workspaces": {
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-right": ["battery", "pulseaudio", "network", "cpu", "memory", "clock"],
+  "hyprland/workspaces": {
     "on-click": "activate",
+    "activate-only": false,
     "persistent_workspaces": {
       "1": [],
       "2": [],
@@ -13,8 +14,7 @@
       "5": [],
       "6": [],
       "7": [],
-      "8": [],
-      "9": []
+      "8": []
     }
   },
   "clock": {
@@ -54,5 +54,18 @@
     },
     "on-click": "pamixer -t",
     "tooltip": false
+  },
+
+  "battery": {
+    "states": {
+        "good": 80,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-icons": [" ", " ", " ", " ", " "]
   }
 }
