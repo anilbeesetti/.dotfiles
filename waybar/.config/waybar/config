@@ -6,7 +6,7 @@
   "hyprland/workspaces": {
     "on-click": "activate",
     "activate-only": false,
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],

@@ -24,3 +24,4 @@ gsettings set "$gnome_schema" font-name "$font_name"
 gsettings set "$gnome_schema" color-scheme "prefer-dark"
 
 hyprctl setcursor $cursor_theme $cursor_size
+export GTK_THEME=$gtk_theme
