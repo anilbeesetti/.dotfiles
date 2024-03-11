@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: alpha(@base, 0.8);
+  background-color: @base;
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -35,13 +35,8 @@ window#waybar.chromium {
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
   background: @blue;
-  border: @blue;
   color: @crust;
-  transition-property: background-color;
-  transition-duration: 0.3s;
 }
 
 #workspaces button.focused,

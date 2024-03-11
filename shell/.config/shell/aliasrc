@@ -3,6 +3,7 @@
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias la='ls -A'
+alias vim='nvim'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
