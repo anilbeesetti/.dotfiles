@@ -1,0 +1,27 @@
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 82
+lines = 25
+
+[window.padding]
+x = 10
+y = 10
+
+[general]
+live_config_reload = true
+import = ["/home/anil/.config/alacritty/catppuccin/catppuccin-mocha.yml", "/home/anil/.config/alacritty/fonts.toml"]
